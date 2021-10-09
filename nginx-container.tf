@@ -29,7 +29,7 @@ resource "aws_ecs_service" "nginx_app" {
   desired_count = var.nginx_app_count
   launch_type = "FARGATE"
   network_configuration {
-    security_groups = [aws_security_group.ecs_tasks.id]
+    security_groups = [aws_security_group.aws-ecs-tasks.id]
     subnets = aws_subnet.aws-subnet.*.id
     assign_public_ip = true
   }

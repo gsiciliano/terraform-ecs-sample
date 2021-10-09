@@ -104,7 +104,7 @@ resource "aws_iam_instance_profile" "ecs-cluster-runner-profile" {
 }
 # ec2 user data for hard drive
 data "template_file" "user_data_cluster" {
-  template = file("templates/cluster_user_data.sh")
+  template = file("templates/cluster-user-data.sh")
   vars = { 
     ecs_cluster = aws_ecs_cluster.aws-ecs.name
   }

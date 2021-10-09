@@ -8,7 +8,7 @@ resource "aws_security_group" "aws-lb" {
     protocol = "tcp"
     from_port = var.nginx_app_port
     to_port = var.nginx_app_port
-    cidr_blocks = [var.app_sources_cidr]
+    cidr_blocks = var.app_sources_cidr
   }
   egress {
     protocol = "-1"
