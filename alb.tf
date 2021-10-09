@@ -36,8 +36,3 @@ resource "aws_alb_listener" "front_end" {
     type = "forward"
   }
 }
-# output nginx public ip
-output "nginx_dns_lb" {
-  description = "DNS load balancer"
-  value = aws_alb.main.dns_name
-}

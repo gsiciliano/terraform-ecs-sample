@@ -160,8 +160,3 @@ resource "aws_security_group_rule" "ecs-cluster-egress" {
   protocol = "-1"
   cidr_blocks = ["0.0.0.0/0"]
 }
-# output ecs cluster public ip
-output "ecs_cluster_runner_ip" {
-  description = "External IP of ECS Cluster"
-  value = [aws_instance.ecs-cluster-runner.*.public_ip]
-}
