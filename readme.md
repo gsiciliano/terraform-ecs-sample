@@ -12,6 +12,7 @@ This repo shows how to deploy and publish a sample nginx container to aws using 
 clone this repo: `git clone https://github.com/gsiciliano/terraform-ecs-sample.git`
 
 rename file `terraform.tfvars.example` in `terraform.tfvars`
+
 edit `terraform.tfvars` replacing:
 * `aws_access_key` = "your-aws-access-key"
 * `aws_secret_key` = "your-aws-secret-key"
@@ -20,7 +21,9 @@ edit `terraform.tfvars` replacing:
 
 ## Run terraform:
 cd in repo folder: `cd terraform-ecs-sample`
+
 init terraform: `terraform init`
+
 run terraform: `terraform apply`
 
 ## How to check if it works:
