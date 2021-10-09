@@ -50,3 +50,18 @@ Final output sound like this:
 `Destroy complete! Resources: 27 destroyed.`
 
 That's all
+### Bonus: what's happens technically
+The terraform tf files in this repo create a kind of infrastructure stratus in AWS to expose an nginx server container for demo purpose.
+
+Each file describe a piece of the architecure in order to be maintened as best as possible
+
+The components of this stratus are:
+
+Networking
+Application load balancer (alb)
+ECS Cluster 
+Nginx server container (with aws fargate)
+
+Some other files contains variables, support information or terminal output commands
+
+The only file to be edited after the first clone is `terraform.tfvars` that must be copied from `terraform.tvars.example` for security reasons (this is repo is public in git-hub and normally no real variable-filled files should be pushed in a remote repository) putting aws secrets and certificate file path and name into it.
