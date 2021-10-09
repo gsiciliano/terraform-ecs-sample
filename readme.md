@@ -57,10 +57,10 @@ Each file describe a piece of the architecure in order to be maintened as best a
 
 The components of this stratus are:
 
-Networking
-Application load balancer (alb)
-ECS Cluster 
-Nginx server container (with aws fargate)
+* Networking
+* Application load balancer (alb)
+* ECS Cluster 
+* Nginx server container (with aws fargate)
 
 Some other files contains variables, support information or terminal output commands
 
